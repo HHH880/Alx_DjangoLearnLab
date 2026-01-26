@@ -1,10 +1,13 @@
 # Create Book
 
-This document describes how to create a new book record in the Bookshelf application.
+This document demonstrates how to create a Book record using the Django ORM.
 
-## Fields
-- **title**: The title of the book (max 200 characters)
-- **author**: The author of the book (max 200 characters)
+## Example
 
-## Process
-A book is created by submitting the title and author to the application, which stores the data in the database.
+```python
+from bookshelf.models import Book
+
+Book.objects.create(
+    title="1984",
+    author="George Orwell"
+)
